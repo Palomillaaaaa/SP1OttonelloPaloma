@@ -25,9 +25,47 @@ namespace SP1OttonelloPaloma
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmBienvenidos frmBienvenidos = new frmBienvenidos();
-            frmBienvenidos.ShowDialog();
-        }
+           if (txtNombre.Text=="Adm")
+            {
+                if (cbmModulo.Text=="ADM"|| cbmModulo.Text=="COM"|| cbmModulo.Text=="VTA")
+                {
+                    if (txtContraseña.Text=="1@a")
+                    {
+                        frmBienvenidos frmBienvenidos = new frmBienvenidos();
+                        frmBienvenidos.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Contraseña Inválida");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Módulo Inválido");
+
+                }
+            }
+           if (txtNombre.Text== "John")
+            {
+                if (cbmModulo.Text =="SIST")
+                {
+                    if (txtContraseña.Text == "*2b")
+                    {
+                        frmBienvenidos frmBienvenidos = new frmBienvenidos();
+                        frmBienvenidos.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Contraseña Inválida");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Módulo Inválido");
+                }
+                   
+            }
+        }  
 
         private void btmCancelar_Click(object sender, EventArgs e)
         {
@@ -44,6 +82,8 @@ namespace SP1OttonelloPaloma
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
+          
+
             if (txtNombre.Text == "")
             {
                 txtContraseña.Enabled = false;

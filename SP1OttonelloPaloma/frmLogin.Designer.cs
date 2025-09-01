@@ -70,6 +70,7 @@
             // 
             txtNombre.ForeColor = SystemColors.MenuHighlight;
             txtNombre.Location = new Point(311, 136);
+            txtNombre.MaxLength = 10;
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(111, 23);
             txtNombre.TabIndex = 3;
@@ -79,6 +80,7 @@
             // 
             txtContraseña.ForeColor = SystemColors.WindowText;
             txtContraseña.Location = new Point(311, 173);
+            txtContraseña.MaxLength = 10;
             txtContraseña.Name = "txtContraseña";
             txtContraseña.PasswordChar = '★';
             txtContraseña.Size = new Size(111, 23);
