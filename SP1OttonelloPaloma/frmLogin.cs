@@ -65,6 +65,50 @@ namespace SP1OttonelloPaloma
                 }
                    
             }
+            if (txtNombre.Text == "Ceci")
+            {
+                if (cbmModulo.Text == "ADM" || cbmModulo.Text == "VTA")
+                {
+                    if (txtContraseña.Text == "*@3c")
+                    {
+                        frmBienvenidos frmBienvenidos = new frmBienvenidos();
+                        frmBienvenidos.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Contraseña Inválida");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Módulo Inválido");
+                }
+            }
+           if (txtNombre.Text == "God") 
+            {
+                if (cbmModulo.Text == "ADM" || cbmModulo.Text == "COM" || cbmModulo.Text == "VTA" || cbmModulo.Text == "SIST")
+                {
+                    if (txtContraseña.Text == "*@#4d")
+                    {
+                        frmBienvenidos frmBienvenidos = new frmBienvenidos();
+                        frmBienvenidos.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Contraseña Inválida");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Módulo Inválido");
+
+                }
+            }
+            else 
+            {
+                MessageBox.Show("Usuario Inválido");
+            }
+           
         }  
 
         private void btmCancelar_Click(object sender, EventArgs e)
