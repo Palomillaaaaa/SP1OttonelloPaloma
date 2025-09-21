@@ -25,11 +25,11 @@ namespace SP1OttonelloPaloma
 
         private void button1_Click(object sender, EventArgs e)
         {
-           if (txtNombre.Text=="Adm")
+            if (txtNombre.Text == "Adm")
             {
-                if (cbmModulo.Text=="ADM"|| cbmModulo.Text=="COM"|| cbmModulo.Text=="VTA")
+                if (cbmModulo.Text == "ADM" || cbmModulo.Text == "COM" || cbmModulo.Text == "VTA")
                 {
-                    if (txtContraseña.Text=="1@a")
+                    if (txtContraseña.Text == "1@a")
                     {
                         frmBienvenidos frmBienvenidos = new frmBienvenidos();
                         frmBienvenidos.ShowDialog();
@@ -45,9 +45,9 @@ namespace SP1OttonelloPaloma
 
                 }
             }
-           if (txtNombre.Text== "John")
+            if (txtNombre.Text == "John")
             {
-                if (cbmModulo.Text =="SIST")
+                if (cbmModulo.Text == "SIST")
                 {
                     if (txtContraseña.Text == "*2b")
                     {
@@ -63,7 +63,7 @@ namespace SP1OttonelloPaloma
                 {
                     MessageBox.Show("Módulo Inválido");
                 }
-                   
+
             }
             if (txtNombre.Text == "Ceci")
             {
@@ -84,7 +84,7 @@ namespace SP1OttonelloPaloma
                     MessageBox.Show("Módulo Inválido");
                 }
             }
-           if (txtNombre.Text == "God") 
+            if (txtNombre.Text == "God")
             {
                 if (cbmModulo.Text == "ADM" || cbmModulo.Text == "COM" || cbmModulo.Text == "VTA" || cbmModulo.Text == "SIST")
                 {
@@ -104,12 +104,12 @@ namespace SP1OttonelloPaloma
 
                 }
             }
-            else 
+            else
             {
                 MessageBox.Show("Usuario Inválido");
             }
-           
-        }  
+
+        }
 
         private void btmCancelar_Click(object sender, EventArgs e)
         {
@@ -126,18 +126,28 @@ namespace SP1OttonelloPaloma
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-          
+
 
             if (txtNombre.Text == "")
             {
                 txtContraseña.Enabled = false;
-             
-    
-        }
+
+
+            }
             else
             {
                 txtContraseña.Enabled = true;
             }
+        }
+
+        private void txtContraseña_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbmModulo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
