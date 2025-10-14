@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBienvenidos));
             btmIngresar = new Button();
             pictureBox1 = new PictureBox();
             pbLogo = new PictureBox();
@@ -37,10 +38,13 @@
             // 
             // btmIngresar
             // 
-            btmIngresar.Location = new Point(315, 303);
+            btmIngresar.FlatStyle = FlatStyle.System;
+            btmIngresar.ForeColor = SystemColors.ControlLightLight;
+            btmIngresar.Location = new Point(529, 608);
+            btmIngresar.Margin = new Padding(4, 5, 4, 5);
             btmIngresar.Name = "btmIngresar";
-            btmIngresar.Size = new Size(204, 52);
-            btmIngresar.TabIndex = 2;
+            btmIngresar.Size = new Size(165, 45);
+            btmIngresar.TabIndex = 0;
             btmIngresar.Text = "Ingresar";
             btmIngresar.UseVisualStyleBackColor = true;
             btmIngresar.Click += button1_Click;
@@ -48,9 +52,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources._417_xlarge;
-            pictureBox1.Location = new Point(-576, 80);
+            pictureBox1.Location = new Point(-823, 133);
+            pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(358, 92);
+            pictureBox1.Size = new Size(511, 153);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
@@ -58,25 +63,31 @@
             // 
             // pbLogo
             // 
-            pbLogo.Image = Properties.Resources._417_xlarge;
-            pbLogo.Location = new Point(136, 91);
+            pbLogo.BackColor = Color.FromArgb(231, 0, 0);
+            pbLogo.Image = (Image)resources.GetObject("pbLogo.Image");
+            pbLogo.Location = new Point(267, 43);
+            pbLogo.Margin = new Padding(4, 5, 4, 5);
             pbLogo.Name = "pbLogo";
-            pbLogo.Size = new Size(534, 182);
+            pbLogo.Size = new Size(647, 515);
             pbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pbLogo.TabIndex = 4;
             pbLogo.TabStop = false;
+            pbLogo.Click += pbLogo_Click;
             // 
             // frmBienvenidos
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(795, 476);
+            BackColor = Color.FromArgb(228, 0, 0);
+            ClientSize = new Size(1136, 793);
             Controls.Add(pbLogo);
             Controls.Add(pictureBox1);
             Controls.Add(btmIngresar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 5, 4, 5);
             Name = "frmBienvenidos";
             Text = "frmBienvenidos";
+            Load += frmBienvenidos_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             ResumeLayout(false);
